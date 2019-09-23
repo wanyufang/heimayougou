@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "indexInput": "../../components/indexInput/index",
+    "swiperImages": "../../components/swiperImages/index"
+  }
+}

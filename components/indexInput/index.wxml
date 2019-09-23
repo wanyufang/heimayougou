@@ -1,0 +1,4 @@
+<view class="inputs">
+    <input type="text" placeholder="搜索"/>
+</view>
+  
