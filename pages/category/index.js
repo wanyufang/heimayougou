@@ -1,66 +1,38 @@
-// pages/category/index.js
+// 引入request
+import { request } from '../../request/index'
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    // 左侧分类列表数据
+    categoryLeft: [],
+    // 右侧详细列表表头数据
+    categoryRight: [],
+    // 右侧详细列表图片及文字
+    categoryRightImage: []
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad() {
+    // 请求左侧分类列表数据
+    this.categoryList()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 请求左侧分类列表数据
+  categoryList() {
+    request({
+      url: '/categories'
+    }).then(result => {
+      // 设置全局this.data 不占用加载资源 
+      this.data = result.data.message
+      // 设置左侧分类列表
+      let categoryLeft = this.data.map(e=>{
+        return e.cat_name
+      })
+      // 右侧详细列表表头
+      let categoryRight = this.data[0].children
+      // 右侧详细列表图片及文字
+      let categoryRightImage = this.data[0].children[0].children
+      this.setData({
+        categoryLeft,
+        categoryRight,
+        categoryRightImage
+      })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

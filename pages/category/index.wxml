@@ -1,2 +1,30 @@
-<!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<view>
+    <indexInput></indexInput>
+    <view class="bbox">
+        <!-- 左侧菜单列表 -->
+        <scroll-view scroll-y class="scrollLeft">
+            <navigator class="leftList" wx:for="{{categoryLeft}}" wx:key="cat_id" wx:for-index="index1"
+                wx:for-item="item1">
+                {{item1}}
+            </navigator>
+        </scroll-view>
+        <!-- 右侧详细数据 -->
+        <scroll-view scroll-y class="scrollRight">
+            <!-- 右侧表头数据 -->
+            <view class="rightListHead" wx:for="{{categoryRight}}" wx:key="cat_id" wx:for-index="index2"
+                wx:for-item="item2">
+                {{item2.cat_name}}
+                <!-- 右侧图片信息 -->
+                <view class="rightListContent" wx:for="{{categoryRightImage}}" wx:key="cat_id" wx:for-index="index3"
+                    wx:for-item="item3">
+                    <navigator class="smbox">
+                        <image src="{{item3.cat_icon}}" mode="widthFix" />
+                        <text>
+                            {{item3.cat_name}}
+                        </text>
+                    </navigator>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

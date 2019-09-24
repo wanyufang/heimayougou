@@ -1,0 +1,45 @@
+.swiperImage{
+    width: 100%;
+}
+.swiper{
+    height: 340rpx;
+}
+.navigator{
+    display: flex;
+    margin-top: 10rpx;
+    .navImage{
+        flex: 1;
+        text-align: center;
+        image {
+            width: 60%;
+        }
+    }   
+}
+.titleImage{
+    width: 100%;
+    background-color: #f4f4f4;
+    padding-top: 14rpx
+}
+.bbox{
+    overflow: hidden;
+    padding: 14rpx;
+    image{
+        width: 100%;
+    }
+    navigator{
+        float: left;
+        width: 33.33%;
+        &:nth-last-child(-n+4){
+            height: 750rpx/3*386px/232px/2;
+            image{
+                border-left: 2px solid #fff;
+                  height : 100%;
+            }
+        };
+        &:nth-last-child(-n+2){
+            image{
+                border-top: 2px solid #fff;
+            }
+        }
+    }
+}

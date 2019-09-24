@@ -1,0 +1,31 @@
+.bbox{
+    display: flex;
+    height: ~'calc(100vh - 45rpx)';
+    overflow: hidden;
+    .scrollLeft{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        .leftList{
+            margin-top: 14rpx;
+            text-align: center;
+            font-size: 28rpx
+        }
+        .fontStyle{
+           color: var(--themeColor)
+        }
+    }   
+    .scrollRight{
+        flex: 3;
+        .rightListContent{
+            float: left;
+            overflow: hidden;
+            .smbox{
+                width: 200rpx;
+                image{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

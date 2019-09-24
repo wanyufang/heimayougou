@@ -9,12 +9,11 @@
     "pages/order/index",
     "pages/search/index",
     "pages/user/index",
-    "pages/feedback/index",
+    "pages/feedback/index", 
     "pages/login/index",
     "pages/auth/index",
     "pages/pay/index",
-    "components/indexInput/index",
-    "components/swiperImages/index"
+    "components/indexInput/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

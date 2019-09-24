@@ -1,0 +1,43 @@
+.swiperImage {
+  width: 100%;
+}
+.swiper {
+  height: 340rpx;
+}
+.navigator {
+  display: flex;
+  margin-top: 10rpx;
+}
+.navigator .navImage {
+  flex: 1;
+  text-align: center;
+}
+.navigator .navImage image {
+  width: 60%;
+}
+.titleImage {
+  width: 100%;
+  background-color: #f4f4f4;
+  padding-top: 14rpx;
+}
+.bbox {
+  overflow: hidden;
+  padding: 14rpx;
+}
+.bbox image {
+  width: 100%;
+}
+.bbox navigator {
+  float: left;
+  width: 33.33%;
+}
+.bbox navigator:nth-last-child(-n+4) {
+  height: 207.97413793rpx;
+}
+.bbox navigator:nth-last-child(-n+4) image {
+  border-left: 2px solid #fff;
+  height: 100%;
+}
+.bbox navigator:nth-last-child(-n+2) image {
+  border-top: 2px solid #fff;
+}

@@ -1,8 +1,0 @@
-<view>
-   <swiper>
-       <swiper-item indicator-dots autoplay circular>
-           
-       </swiper-item>
-   </swiper>
-</view>
-  

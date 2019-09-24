@@ -1,66 +1,51 @@
 // pages/goods_list/index.js
+// 引入处理异步请求的promise
+import { request } from "../../request/index"
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    // 轮播图数组
+    swiperList: [],
+    // 分类导航数组
+    catitemsList: [],
+    // 楼层数组
+    floordataList: [],
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad() {
+    // 请求轮播图数据
+    this.swiperReq()
+    // 请求分类导航数据
+    this.catitemsReq()
+    // 请求楼层数据
+    this.floordataReq()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 请求轮播图数据
+  swiperReq() {
+    request({
+      url: '/home/swiperdata',
+    }).then(result => {
+      this.setData({
+        swiperList: result.data.message
+      })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 请求分类导航数据
+  catitemsReq() {
+    request({
+      url: '/home/catitems'
+    }).then(result => {
+      this.setData({
+        catitemsList: result.data.message
+      })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 请求楼层数据
+  floordataReq() {
+    request({
+      url: '/home/floordata',
+    }).then(result => {
+      this.setData({
+        floordataList: result.data.message
+      })
+    })
   }
 })

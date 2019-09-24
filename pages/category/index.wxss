@@ -1,1 +1,31 @@
-/* pages/category/index.wxss */
+.bbox {
+  display: flex;
+  height: calc(100vh - 45rpx);
+  overflow: hidden;
+}
+.bbox .scrollLeft {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.bbox .scrollLeft .leftList {
+  margin-top: 14rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.bbox .scrollLeft .fontStyle {
+  color: var(--themeColor);
+}
+.bbox .scrollRight {
+  flex: 3;
+}
+.bbox .scrollRight .rightListContent {
+  float: left;
+  overflow: hidden;
+}
+.bbox .scrollRight .rightListContent .smbox {
+  width: 200rpx;
+}
+.bbox .scrollRight .rightListContent .smbox image {
+  width: 100%;
+}
