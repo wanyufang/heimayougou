@@ -48,12 +48,27 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
+					"id": 0,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
 					"id": -1,
-					"name": "pages/category/index",
+					"name": "分类",
 					"pathName": "pages/category/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "分类列表页",
+					"pathName": "pages/goods_list/index",
+					"query": "cid=15",
 					"scene": null
 				}
 			]

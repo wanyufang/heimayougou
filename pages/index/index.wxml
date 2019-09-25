@@ -25,9 +25,9 @@
             <image class="" src="{{item1.floor_title.image_src}}" mode="widthFix" class="titleImage" />
             <!-- 图片 -->
             <view class="bbox">
-                <navigator wx:for="{{item1.product_list}}" wx:key="name" class="contentImage" wx:for-index="index2"
+                <navigator wx:for="{{item1.product_list}}" wx:key="name" class="contentImage" wx:for-index="index2" open-type="switchTab" url="/pages/category/index"
                     wx:for-item="item2">
-                    <image src="{{item2.image_src}}" mode="{{index2===0?'widthFix':'scaleToFill'}}" />
+                    <image src="{{item2.image_src}}" mode="{{index2===0?'widthFix':'scaleToFill'}}"/>
                 </navigator>
             </view>
         </view>

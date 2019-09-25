@@ -15,17 +15,23 @@
 }
 .bbox .scrollLeft .fontStyle {
   color: var(--themeColor);
+  border-left: 2px solid currentColor;
 }
 .bbox .scrollRight {
   flex: 3;
 }
+.bbox .scrollRight .goods_group_title {
+  text-align: center;
+  padding: 20rpx 0;
+}
 .bbox .scrollRight .rightListContent {
-  float: left;
-  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
 }
 .bbox .scrollRight .rightListContent .smbox {
-  width: 200rpx;
+  width: 33.33%;
+  text-align: center;
 }
 .bbox .scrollRight .rightListContent .smbox image {
-  width: 100%;
+  width: 60%;
 }

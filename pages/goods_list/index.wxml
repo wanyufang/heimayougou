@@ -1,2 +1,17 @@
-<!--pages/goods_list/index.wxml-->
-<text>pages/goods_list/index.wxml</text>
+<indexInput></indexInput>
+<productList bindpushIndex="getsomeList" tabValueList="{{tabValueList}}" currentIndex="{{currentIndex}}">
+    <view wx:if="{{currentIndex===0}}">
+        <navigator class="shoreGoods" wx:for="{{goodsValue}}" wx:key="goods_id">
+            <view class="commodityImg">
+                <image class="commImg" src="{{item.goods_small_logo||'http://img5.imgtn.bdimg.com/it/u=4096944214,1677787421&fm=26&gp=0.jpg'}}" mode="widthFix"/>             
+            </view>
+            <view class="commodityText">
+                <view class="littleText">{{item.goods_name}}</view>
+                <view class="storePrice">￥{{item.goods_price}}</view>
+            </view>
+        </navigator>         
+    </view>
+    <view wx:elif="{{currentIndex===1}}">111111111111111</view>
+    <view wx:else>222222222</view>
+</productList>
+  

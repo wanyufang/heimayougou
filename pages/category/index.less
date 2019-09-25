@@ -12,18 +12,24 @@
             font-size: 28rpx
         }
         .fontStyle{
-           color: var(--themeColor)
+           color: var(--themeColor);
+           border-left: 2px solid currentColor
         }
     }   
     .scrollRight{
         flex: 3;
+        .goods_group_title{
+            text-align: center;
+            padding: 20rpx 0
+        }
         .rightListContent{
-            float: left;
-            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
             .smbox{
-                width: 200rpx;
+                width: 33.33%;
+                text-align: center;
                 image{
-                    width: 100%;
+                    width: 60%;
                 }
             }
         }

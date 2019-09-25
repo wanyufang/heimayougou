@@ -1,0 +1,15 @@
+<!-- tab分栏开始 -->
+<view>
+    <view class="bbox">
+        <view wx:for="{{tabValueList}}" wx:key="id" class="tabs {{currentIndex===index?'active':''}}"
+            bindtap="clickIndex" data-index="{{index}}">
+            {{item.name}}
+        </view>
+    </view>
+    <view class="storeList">
+        <slot></slot>
+    </view>
+</view>
+
+
+<!-- tab分栏结束 -->

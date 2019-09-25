@@ -1,0 +1,16 @@
+.bbox {
+  display: flex;
+  align-content: center;
+}
+.bbox .tabs {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  color: #8e7e71;
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.bbox .active {
+  color: var(--themeColor);
+  border-bottom: 1px solid currentColor;
+}

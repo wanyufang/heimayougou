@@ -1,23 +1,39 @@
 <view>
     <indexInput></indexInput>
     <view class="bbox">
-        <!-- 左侧菜单列表 -->
+        <!-- 左侧菜单列表开始 -->
         <scroll-view scroll-y class="scrollLeft">
-            <navigator class="leftList" wx:for="{{categoryLeft}}" wx:key="cat_id" wx:for-index="index1"
-                wx:for-item="item1">
+            <view class="leftList {{categoryIndex===index1?'fontStyle':''}}" wx:for="{{categoryLeft}}" wx:key="cat_id" wx:for-index="index1"
+                wx:for-item="item1" bindtap="clickIndex" data-index="{{index1}}">
                 {{item1}}
-            </navigator>
+            </view>
         </scroll-view>
-        <!-- 右侧详细数据 -->
+        <!-- 左侧菜单列表结束 -->
+
+        <!-- 右侧详细数据开始 -->
         <scroll-view scroll-y class="scrollRight">
-            <!-- 右侧表头数据 -->
-            <view class="rightListHead" wx:for="{{categoryRight}}" wx:key="cat_id" wx:for-index="index2"
-                wx:for-item="item2">
-                {{item2.cat_name}}
+            <!-- 右侧表头数据开始 -->
+            <view 
+            class="rightListHead" 
+            wx:for="{{categoryRight}}" 
+            wx:key="cat_id" 
+            wx:for-index="index2"
+            wx:for-item="item2">
+                <view class="goods_group_title">
+                    <text class="separator">/</text>
+                    <text class="group_title">{{item2.cat_name}}</text>
+                    <text class="separator">/</text>
+                </view>
                 <!-- 右侧图片信息 -->
-                <view class="rightListContent" wx:for="{{categoryRightImage}}" wx:key="cat_id" wx:for-index="index3"
-                    wx:for-item="item3">
-                    <navigator class="smbox">
+                <view 
+                class="rightListContent">
+                    <navigator 
+                    class="smbox" 
+                    wx:for="{{item2.children}}" 
+                    wx:key="cat_id" 
+                    wx:for-index="index3"
+                    wx:for-item="item3"
+                    url="/pages/goods_list/index?cid={{item3.cat_id}}">
                         <image src="{{item3.cat_icon}}" mode="widthFix" />
                         <text>
                             {{item3.cat_name}}
@@ -26,5 +42,6 @@
                 </view>
             </view>
         </scroll-view>
+        <!-- 右侧详细数据结束 -->
     </view>
 </view>

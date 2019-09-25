@@ -9,17 +9,20 @@
     "pages/order/index",
     "pages/search/index",
     "pages/user/index",
-    "pages/feedback/index", 
+    "pages/feedback/index",
     "pages/login/index",
     "pages/auth/index",
     "pages/pay/index",
-    "components/indexInput/index"
+    "components/indexInput/index",
+    "components/productList/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#eb4450",
     "navigationBarTitleText": "黑马优购",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 10
   },
   "tabBar": {
     "list": [

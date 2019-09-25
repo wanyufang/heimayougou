@@ -12,6 +12,8 @@ export const request = (params) => {
         // 这个代码段 会在promise被new的时候执行
         const baseUrl = 'https://api.zbztb.cn/api/public/v1'
         wx.request({
+            // 解构params
+            ...params,
             url: baseUrl + params.url,
             success: (result) => {
                 resolve(result)

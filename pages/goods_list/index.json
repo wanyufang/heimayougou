@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "indexInput": "../../components/indexInput/index",
+    "productList": "../../components/productList/index"
+  },
+  "backgroundTextStyle": "dark"
 }

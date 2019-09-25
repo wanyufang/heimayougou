@@ -1,1 +1,27 @@
-/* pages/goods_list/index.wxss */
+.shoreGoods {
+  display: flex;
+  padding: 10rpx 10rpx;
+  border-bottom: 2rpx solid #ccc;
+  height: 140rpx;
+}
+.shoreGoods .commodityImg {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+.shoreGoods .commodityImg .commImg {
+  width: 80%;
+}
+.shoreGoods .commodityText {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.shoreGoods .commodityText .littleText {
+  font-size: 26rpx;
+}
+.shoreGoods .commodityText .storePrice {
+  font-size: 28rpx;
+  color: var(--themeColor);
+}
